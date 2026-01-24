@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Demo Menu Cabeza Mejorado</title>
+  <link rel="stylesheet" href="menu_sty.css">
+</head>
+<body>
+
+<div class="menu" id="menu">
+  <h2>Menu Rapido</h2>
+  <button>Seleccionar</button>
+  <div class="tab" id="tab"></div>
+</div>
+
+<script>
+const menu = document.getElementById('menu');
+const tab = document.getElementById('tab');
+let hideTimer;
+
+function showMenu(resetTimer = true) {
+  menu.classList.add('visible');
+  
+  if (resetTimer) {
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hideMenu, 15000);
+  }
+}
+
+function hideMenu() {
+  menu.classList.remove('visible');
+}
+
+function toggleMenu() {
+  if (menu.classList.contains('visible')) {
+    hideMenu();
+    clearTimeout(hideTimer);
+  } else {
+    showMenu();
+  }
+}
+
+// Mostrar al cargar
+showMenu();
+
+// Toggle con el tab
+tab.addEventListener('click', toggleMenu);
+
+// Ocultar al clickear fuera
+document.addEventListener('click', e => {
+  if (!menu.contains(e.target) && e.target !== tab) {
+    hideMenu();
+    clearTimeout(hideTimer);
+  }
+});
+
+// Reiniciar temporizador cuando interactúa con el menú
+menu.addEventListener('click', () => {
+  if (menu.classList.contains('visible')) {
+    showMenu(); // solo reinicia el temporizador
+  }
+});
+
+// Opcional: ciclo automático cada 15s cuando está oculto
+// (comentar si no lo quieres)
+setInterval(() => {
+  if (!menu.classList.contains('visible')) {
+    showMenu();
+  }
+}, 2000);
+</script>
+</body>
+</html>

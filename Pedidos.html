@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PIZZAZ CAMPER</title>
+</head>
+<style>
+    :root {
+      --primary: #2c3e50;
+      --light: #f8f9fa;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f0f2f5;
+      padding: 1.5rem;
+      min-height: 100vh;
+    }
+
+    .menu-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    details {
+      background: white;
+      display: block;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    details[open] {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    summary {
+      padding: 1.1rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: background 0.2s;
+    }
+
+    summary:hover {
+      background: #34495e;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '▼';
+      font-size: 0.9em;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    details[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .content {
+      padding: 1.5rem;
+      background: var(--light);
+      max-height: 0;
+      overflow: hidden;
+      transition: 
+        max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.4s ease;
+    }
+
+    details[open] .content {
+      max-height: 2000px; /* valor grande, ajusta según necesites */
+      padding: 1.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-name {
+      padding: 0.9rem;
+      font-weight: 600;
+      color: #2c3e50;
+      text-align: center;
+    }
+  </style>
+<body>
+  
+  
+<div class="menu-container">
+
+  <details >
+    <summary>Ensaladas</summary>
+    <div class="content">
+      <div class="cards">
+        <div class="card"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500" alt=""><div class="card-name">Ensalada de huevo</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=500" alt=""><div class="card-name">Ensalada de frutas</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1627308595316-94b4e4c5e2e0?w=500" alt=""><div class="card-name">Ensalada de atún</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=500" alt=""><div class="card-name">Ensalada César</div></div>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Postres</summary>
+    <div class="content">
+      <div class="cards">
+        <div class="card"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500" alt=""><div class="card-name">Cheesecake</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1550617931-eb3a88e845b1?w=500" alt=""><div class="card-name">Tiramisú</div></div>
+        <!-- más postres... -->
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Sopas</summary>
+    <div class="content">
+      <div class="cards">
+        <div class="card"><img src="https://images.unsplash.com/photo-1613769049987-b31b641f25b1?w=500" alt=""><div class="card-name">Sopa de tortilla</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1613769049987-b31b641f25b1?w=500" alt=""><div class="card-name">Sopa de tortilla</div></div>
+<!-- más sopas... -->
+      </div>
+    </div>
+  </details>
+  <!--__________________-->
+</div>
+
+</body>
+</html>
