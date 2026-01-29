@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú</title>
+    <link rel="stylesheet" href="cocina.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+
+
+<input type="text" id="search" placeholder="Buscar comida...">
+
+
+
+  <details>
+    <summary>Menu Principal</summary>
+    <div class="content">
+    <div class="cards">
+        <div class="card"><img src="/images/pizza pepperoni.png" alt="">
+            <div class="card-name">Pizza de Pepperoni
+                <p class="precio">$185<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza pepperoni', 185)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_hawa.png" alt="">
+            <div class="card-name">Pizza Hawaiana
+                <p class="precio">$198<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza hawaiana', 198)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_3_car.png" alt="">
+            <div class="card-name">Pizza Tres Carnes
+                <p class="precio">$235<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza tres carnes', 235)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_flm_hot.png" alt="">
+            <div class="card-name">Pizza Flamin Hot
+                <p class="precio">$285<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza flamin hot', 285)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_especial.png" alt="">
+            <div class="card-name">Pizza Especial
+                <p class="precio">$285<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza especial', 285)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_supre.png" alt="">
+            <div class="card-name">Pizza Suprema
+                <p class="precio">$285<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza suprema', 285)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_boneless.png" alt="">
+            <div class="card-name">Pizza con Boneless
+                <p class="precio">$285<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza con boneless', 285)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_ital.png" alt="">
+            <div class="card-name">Pizza Italiana
+                <p class="precio">$225<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza italiana', 225)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_2ble_sabor.png" alt="">
+            <div class="card-name">Pizza Doble Sabor
+                <p class="precio">$215<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza doble sabor', 215)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_4.png" alt="">
+            <div class="card-name">Pizza Cuatro Estaciones
+                <p class="precio">$225<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza cuatro estaciones', 255)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_veg.png" alt="">
+            <div class="card-name">Pizza Vegana
+                <p class="precio">$195<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza vegana', 195)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_duo_champ.png" alt="">
+            <div class="card-name">Pizza Duo Champiñon
+                <p class="precio">$225<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza duo champiñon', 225)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_car_asada.png" alt="">
+            <div class="card-name">Pizza Carne Asada
+                <p class="precio">$280<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza carne asada', 280)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_duo_supr.png" alt="">
+            <div class="card-name">Pizza Duo Suprema
+                <p class="precio">$245<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza duo suprema', 245)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_pep_jal.png" alt="">
+            <div class="card-name">Pepperoni con Jalapeño
+                <p class="precio">$200<span>.00</span></p>
+                <button onclick="agregarAlCarrito('Pepperoni con jalapeño', 200)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pep_hawai.png" alt="">
+            <div class="card-name">Pepperoni-Hawaiana
+                <p class="precio">$210<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pepperoni - hawaiana', 210)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pep_salch_it.png" alt="">
+            <div class="card-name">Pepperoni Salchicha Italiana
+                <p class="precio">$215<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pepperoni - salchicha italiana', 215)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pep_3_carn.png" alt="">
+            <div class="card-name">Pepperoni Tres Carnes
+                <p class="precio">$220<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pepperoni tres carnes', 220)">Agregar a carrito</button>
+            </div>
+        </div>
+        <div class="card"><img src="/images/pz_queso.png" alt="">
+            <div class="card-name">Pizza de Queso
+                <p class="precio">$170<span>.00</span></p>
+                <button onclick="agregarAlCarrito('pizza de queso', 170)">Agregar a carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    
+    </div>
+</details>
+<details>
+    <summary>Menu de entrada</summary>
+        <div class="content">
+        <div class="cards">
+            <div class="card"><img src="/images/ali_picosi.png" alt="">
+                <div class="card-name">Alitas Picositas
+                    <p class="precio">$150<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('alitas picositas', 150)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/boneles.png" alt="">
+                <div class="card-name">Boneless
+                    <p class="precio">$140<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('boneless', 140)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/aro_cebolla.png" alt="">
+                <div class="card-name">Aros de Cebolla
+                    <p class="precio">$85<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('aros de cebolla', 85)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/dedos_queso.png" alt="">
+                <div class="card-name">Dedos de Queso
+                    <p class="precio">$130<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('dedos de queso', 130)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/pps_c_queso.png" alt="">
+                <div class="card-name">Papas con Queso y Tocino
+                    <p class="precio">$115<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('papas c/ queso y tocino', 115)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/papas_c_bon.png" alt="">
+                <div class="card-name">Papas con Boneless
+                    <p class="precio">$185<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('papas con boneless', 185)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/pan_ajo.png" alt="">
+                <div class="card-name">Orden - Pan de Ajo
+                    <p>(4 panes y 1 orden de papas)</p>
+                    <p class="precio">$180<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('orden - pan de ajo', 180)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/hamb_c_queso.png" alt="">
+                <div class="card-name">Hamburguesa con Papas
+                    <p class="precio">$125<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('hamburguesa con papas', 125)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/ens_pollo.png" alt="">
+                <div class="card-name">Ensalada con Pollo
+                    <p class="precio">$140<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('ensalada con pollo', 140)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/tiras_d_pollo.png" alt="">
+                <div class="card-name">Tiras de Pollo
+                    <p class="precio">$150<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('tiras de pollo', 150)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/camp_box.png" alt="">
+                <div class="card-name">Camper Box
+                    <p class="precio">$395<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('camper box', 395)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/M_camp_box.png" alt="">
+                <div class="card-name">Mega Box
+                    <p class="precio">$480<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('Mega Box', 480)">Agregar a carrito</button>
+                </div>
+            </div>
+            <div class="card"><img src="/images/pasta_alf.png" alt="">
+                <div class="card-name">Pasta Alfredo
+                    <p class="precio">$85<span>.00</span></p>
+                        <button onclick="agregarAlCarrito('pasta alfredo', 85)">Agregar a carrito</button>
+                </div>
+            </div>
+
+            <div class="card">
+            <div class="card-name">
+                <button class="toggle-options">+</button>
+                <!-- Imagen principal -->
+                <img id="img-refresco" src="/images/bebida1.png" class="card-img">
+
+                <p id="nombre-refresco">Selecciona un Refresco</h3>
+                <p id="precio-refresco"></p>
+
+                <!-- Lista desplegable -->
+                <div class="options">
+                    <button onclick="seleccionarRefresco('/images/bebida2.png','Agua fresca',25)">
+                    Agua Natural
+                    </button>
+                    <button onclick="seleccionarRefresco('/images/bebida3.png','Coca-Cola',23)">
+                    Coca
+                    </button>
+                    <button onclick="seleccionarRefresco('/images/bebida1.png','Bebida 3',23)">
+                    Bebida
+                    </button>
+                </div>
+                <button onclick="agregarAlCarrito(productoSeleccionado.nombre, productoSeleccionado.precio)">Agregar a carrito</button>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+</details>
+
+<div id="carrito" onclick="event.stopImmediatePropagation()">
+    <h2> Tu Carrito</h2>
+
+    <div id="lista-carrito"></div>
+    <p id="mensaje-error" class="mensaje-error">
+  No hay nada que agregar al carrito
+</p>
+
+    <p id="total" style="margin-top:10px; font-weight:bold;">Total: $0.00 MXN</p>
+
+    <button onclick="vaciarCarrito()" style="margin-top:10px; background-color: white;">Vaciar carrito</button>
+    <button onclick="comprar()" style="margin-top:10px; background-color: white;">Comprar</button>
+
+    <p id="mensaje-compra">¡Compra realizada! 🎉</p>
+</div>
+<button id="boton-carrito" onclick="toggleCarrito()">🛒</button>
+
+
+<script src="agr_btn_car.js"></script>
+<script src="app.js"></script>
+<!-- <script>
+    document.addEventListener("click", function(e) {
+
+    const carrito = document.getElementById("carrito");
+    const boton = document.getElementById("boton-carrito");
+
+    if (!carrito) return;
+
+    // Si el carrito está abierto
+    if (carrito.classList.contains("abierto")) {
+
+        // Si el clic NO fue dentro del carrito Y NO fue en el botón
+        if (!carrito.contains(e.target) && !boton.contains(e.target)) {
+            carrito.classList.remove("abierto");
+        }
+    }
+});
+</script> -->
+</body>
+</html>

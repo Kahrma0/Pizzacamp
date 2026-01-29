@@ -1,0 +1,351 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 12px;
+    background-color: #f0f0f0;
+    position:relative;
+    -webkit-tap-highlight-color: transparent
+}
+
+
+
+#search {
+  width: 50%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.section-title {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    border: none;
+    text-align: left;
+}
+
+.section-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.item {
+    padding: 5px 0;
+}
+
+
+/*nueva seccion*/
+    details {
+      background: white;
+      display: block;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+        details[open] {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    summary {
+      padding: 1.2rem 1.5rem;
+      background: rgb(175, 46, 46);
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      min-height: 48px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: background 1s;
+    }
+        summary:hover {
+      background: #5c0a21;
+    }
+    summary::-webkit-details-marker { display: none; }
+
+        summary::after {
+      content: '▼';
+      font-size: 0.9em;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+        details[open] summary::after {
+      transform: rotate(180deg);
+    }
+        .content {
+      padding: 1.5rem;
+      background: var(--light);
+      transition: 
+        max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.4s ease;
+    }
+        details[open] .content {
+      max-height: 2000px; /* valor grande, ajusta según necesites */
+      padding: 1.5rem;
+    }
+        .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.8rem;
+    }
+    
+    .card {
+      position: relative;
+       width: clamp(160px, 45vw, 230px);
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+      transition: all 0.25s ease;
+    }
+        .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+        .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+        .card-name {
+      padding: 0.9rem;
+      font-weight: 600;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .card button {
+    background-color: #cf1901;
+    color: white;
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    object-fit: cover;
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+    }
+
+    .card button:hover{
+    background-color: #dda405;
+    }
+
+    .precio {
+        text-align: center;
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    /* Carrito */
+
+.carrito{
+  filter: invert(100%);
+  width: 45px;
+  height: auto;
+}
+  #carrito{
+      position: fixed;
+      bottom: -100%;
+      right: 0;
+      width: 100%;
+      max-width: 380px;
+      height: 380px;
+      background: #222222;
+      color: white;
+      padding: 20px;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
+      overflow-y: auto;
+  }
+  #carrito button{
+    background-color:#494949;
+}
+#carrito.abierto{
+    bottom: 0;
+}
+#lista-carrito .item-carrito{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    padding: 8px 0;
+    color: white;
+}
+#boton-carrito{
+    position: fixed;
+    top: 0.6vh;
+    right: 20px;
+    padding: 9px 18px;
+    background: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* mensaje de error */
+#mensaje-compra {
+    display: none;
+    background: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.mensaje-error{
+  opacity: 0;
+  margin-top: 10px;
+  color: white;
+  background: #b52b2b;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.mensaje-error.mostrar{
+  opacity: 1;
+}
+
+/* Botón circular */
+.toggle-options{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: #b52b2b;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Opciones ocultas */
+.options{
+  display: none;
+  margin-top: 10px;
+}
+
+.options button{
+  width: 100%;
+  margin: 5px 0;
+  border: none;
+  padding: 6px;
+  background: #d47676;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.add-cart{
+  margin-top: 10px;
+  background: #b52b2b;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+  /* ===== DETAILS / SUMMARY ===== */
+
+  details {
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  summary {
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 70vh; /* evita que encierre las cards */
+  }
+
+  details[open] .content {
+    max-height: 70vh;
+  }
+
+  /* ===== CARDS (GRID) ===== */
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por fila */
+    gap: 0.8rem;
+  }
+
+  /* ===== CARD ===== */
+
+  .card {
+    width: 100%; /* importante: no clamp en móvil */
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 130px;
+  }
+
+  .card-name {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .precio {
+    font-size: 0.9rem;
+  }
+
+  .card button {
+    width: 100%;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+
+  /* Botón circular dentro de card */
+  .toggle-options {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  /* ===== CARRITO ===== */
+
+  #carrito {
+    width: 100%;
+    max-width: 90%;
+    height: 40vh; /* no fijo */
+    padding: 30px;
+    border-radius: 1px 1px 0 0;
+  }
+
+  #lista-carrito {
+    max-height: 45vh;
+    overflow-y: auto;
+  }
+
+  #lista-carrito .item-carrito {
+    font-size: 0.9rem;
+  }
+
+  #boton-carrito {
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+}
