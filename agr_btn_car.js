@@ -79,7 +79,7 @@ function comprar() {
 
 
     // Enviar a WhatsApp
-    const numero = "+52 823 109 4576" //"+52 1 823 110 7126"; // +52 826 169 71 82
+    const numero = "+52 1 823 110 7126"; 
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 
@@ -92,3 +92,4 @@ function comprar() {
     mensajeCompra.style.display = "block";
     setTimeout(() => mensajeCompra.style.display = "none", 2500);
 }
+
